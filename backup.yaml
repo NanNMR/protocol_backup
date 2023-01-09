@@ -1,5 +1,6 @@
 ---
 auth file: /NAN/protocol_backup/auth.yaml
-group: edison-group
-storage: /tmp/storehere
+group: edison-lab
+output directory: /tmp/storehere
+page size: 100
 ...

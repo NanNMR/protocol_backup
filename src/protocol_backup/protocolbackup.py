@@ -20,6 +20,7 @@ from protocol_backup.item import Item
 class BackupProtocols:
 
     def __init__(self,config):
+        self.group = config['group']
         afile = config['auth file']
         if os.path.exists(afile):
             with open(afile) as f:
@@ -97,7 +98,7 @@ class BackupProtocols:
 
     def workspace_protocols(self):
         self.protocols : List[Item]  = []
-        url ="https://www.protocols.io/api/v3/workspaces/edison-lab/protocols"
+        url = f"https://www.protocols.io/api/v3/workspaces/{self.group}/protocols"
         params = {'page_size':'100'}
         r = self.get(url,params=params,headers=self.private_header)
         print(len(self.protocols))
