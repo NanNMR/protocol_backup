@@ -1,0 +1,5 @@
+---
+auth file: /NAN/protocol_backup/auth.yaml
+group: edison-group
+storage: /tmp/storehere
+...
